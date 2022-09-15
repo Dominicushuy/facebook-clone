@@ -24,10 +24,10 @@ export default function CodeVerification({
   const verifyCode = async () => {
     try {
       setLoading(true);
-      await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/validateResetCode`,
-        { email, code }
-      );
+      await axios.post(`http://103.183.112.116:8080/validateResetCode`, {
+        email,
+        code,
+      });
       setVisible(3);
       setError("");
       setLoading(false);

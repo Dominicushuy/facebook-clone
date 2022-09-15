@@ -77,7 +77,7 @@ export default function RegisterForm({ setVisible }) {
   const registerSubmit = async () => {
     try {
       const { data } = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/register`,
+        `http://103.183.112.116:8080/register`,
         {
           first_name,
           last_name,

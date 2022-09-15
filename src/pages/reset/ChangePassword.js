@@ -32,7 +32,7 @@ export default function ChangePassword({
   const changePassword = async () => {
     try {
       setLoading(true);
-      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/changePassword`, {
+      await axios.post(`http://103.183.112.116:8080/changePassword`, {
         email,
         password,
       });

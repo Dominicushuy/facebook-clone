@@ -52,7 +52,7 @@ export default function Profile({ getAllPosts }) {
         type: "PROFILE_REQUEST",
       });
       const { data } = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/getProfile/${userName}`,
+        `http://103.183.112.116:8080/getProfile/${userName}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -64,7 +64,7 @@ export default function Profile({ getAllPosts }) {
       } else {
         try {
           const images = await axios.post(
-            `${process.env.REACT_APP_BACKEND_URL}/listImages`,
+            `http://103.183.112.116:8080/listImages`,
             { path, sort, max },
             {
               headers: {

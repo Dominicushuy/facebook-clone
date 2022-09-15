@@ -30,7 +30,7 @@ function App() {
         type: "POSTS_REQUEST",
       });
       const { data } = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/getAllposts`,
+        `http://103.183.112.116:8080/getAllposts`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,

@@ -24,7 +24,7 @@ export default function SearchAccount({
       setLoading(true);
 
       const { data } = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/findUser`,
+        `http://103.183.112.116:8080/findUser`,
         { email }
       );
       setUserInfos(data);

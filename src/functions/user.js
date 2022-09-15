@@ -2,7 +2,7 @@ import axios from "axios";
 export const updateprofilePicture = async (url, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/updateProfilePicture`,
+      `http://103.183.112.116:8080/updateProfilePicture`,
       {
         url,
       },
@@ -20,7 +20,7 @@ export const updateprofilePicture = async (url, token) => {
 export const updateCover = async (url, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/updateCover`,
+      `http://103.183.112.116:8080/updateCover`,
       {
         url,
       },
@@ -38,7 +38,7 @@ export const updateCover = async (url, token) => {
 export const addFriend = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/addFriend/${id}`,
+      `http://103.183.112.116:8080/addFriend/${id}`,
       {},
 
       {
@@ -55,7 +55,7 @@ export const addFriend = async (id, token) => {
 export const cancelRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/cancelRequest/${id}`,
+      `http://103.183.112.116:8080/cancelRequest/${id}`,
       {},
 
       {
@@ -72,7 +72,7 @@ export const cancelRequest = async (id, token) => {
 export const follow = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/follow/${id}`,
+      `http://103.183.112.116:8080/follow/${id}`,
       {},
 
       {
@@ -90,7 +90,7 @@ export const follow = async (id, token) => {
 export const unfollow = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/unfollow/${id}`,
+      `http://103.183.112.116:8080/unfollow/${id}`,
       {},
 
       {
@@ -107,7 +107,7 @@ export const unfollow = async (id, token) => {
 export const acceptRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/acceptRequest/${id}`,
+      `http://103.183.112.116:8080/acceptRequest/${id}`,
       {},
 
       {
@@ -124,7 +124,7 @@ export const acceptRequest = async (id, token) => {
 export const unfriend = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/unfriend/${id}`,
+      `http://103.183.112.116:8080/unfriend/${id}`,
       {},
 
       {
@@ -141,7 +141,7 @@ export const unfriend = async (id, token) => {
 export const deleteRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/deleteRequest/${id}`,
+      `http://103.183.112.116:8080/deleteRequest/${id}`,
       {},
 
       {
@@ -158,7 +158,7 @@ export const deleteRequest = async (id, token) => {
 export const search = async (searchTerm, token) => {
   try {
     const { data } = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/search/${searchTerm}`,
+      `http://103.183.112.116:8080/search/${searchTerm}`,
       {},
 
       {
@@ -175,7 +175,7 @@ export const search = async (searchTerm, token) => {
 export const addToSearchHistory = async (searchUser, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/addToSearchHistory`,
+      `http://103.183.112.116:8080/addToSearchHistory`,
       { searchUser },
 
       {
@@ -192,7 +192,7 @@ export const addToSearchHistory = async (searchUser, token) => {
 export const getSearchHistory = async (token) => {
   try {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/getSearchHistory`,
+      `http://103.183.112.116:8080/getSearchHistory`,
 
       {
         headers: {
@@ -208,7 +208,7 @@ export const getSearchHistory = async (token) => {
 export const removeFromSearch = async (searchUser, token) => {
   try {
     const { data } = await axios.put(
-      `${process.env.REACT_APP_BACKEND_URL}/removeFromSearch`,
+      `http://103.183.112.116:8080/removeFromSearch`,
       { searchUser },
 
       {
@@ -225,7 +225,7 @@ export const removeFromSearch = async (searchUser, token) => {
 export const getFriendsPageInfos = async (token) => {
   try {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/getFriendsPageInfos`,
+      `http://103.183.112.116:8080/getFriendsPageInfos`,
 
       {
         headers: {
