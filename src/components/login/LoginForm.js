@@ -33,7 +33,7 @@ export default function LoginForm({ setVisible }) {
   const loginSubmit = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.post(`http://103.183.112.116:8080/login`, {
+      const { data } = await axios.post(`http://localhost:8080/login`, {
         email,
         password,
       });

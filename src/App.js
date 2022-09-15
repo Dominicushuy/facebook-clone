@@ -29,14 +29,11 @@ function App() {
       dispatch({
         type: "POSTS_REQUEST",
       });
-      const { data } = await axios.get(
-        `http://103.183.112.116:8080/getAllposts`,
-        {
-          headers: {
-            Authorization: `Bearer ${user.token}`,
-          },
-        }
-      );
+      const { data } = await axios.get(`http://localhost:8080/getAllposts`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
       dispatch({
         type: "POSTS_SUCCESS",
         payload: data,
