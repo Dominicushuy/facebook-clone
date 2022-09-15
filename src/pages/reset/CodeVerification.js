@@ -24,7 +24,7 @@ export default function CodeVerification({
   const verifyCode = async () => {
     try {
       setLoading(true);
-      await axios.post(`http://localhost:8080/validateResetCode`, {
+      await axios.post(`http://103.183.112.116:8080/validateResetCode`, {
         email,
         code,
       });

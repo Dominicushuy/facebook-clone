@@ -9,7 +9,7 @@ export const createPost = async (
 ) => {
   try {
     const { data } = await axios.post(
-      `http://localhost:8080/createPost`,
+      `http://103.183.112.116:8080/createPost`,
       {
         type,
         background,
@@ -32,7 +32,7 @@ export const createPost = async (
 export const reactPost = async (postId, react, token) => {
   try {
     const { data } = await axios.put(
-      `http://localhost:8080/reactPost`,
+      `http://103.183.112.116:8080/reactPost`,
       {
         postId,
         react,
@@ -52,7 +52,7 @@ export const reactPost = async (postId, react, token) => {
 export const getReacts = async (postId, token) => {
   try {
     const { data } = await axios.get(
-      `http://localhost:8080/getReacts/${postId}`,
+      `http://103.183.112.116:8080/getReacts/${postId}`,
 
       {
         headers: {
@@ -69,7 +69,7 @@ export const getReacts = async (postId, token) => {
 export const comment = async (postId, comment, image, token) => {
   try {
     const { data } = await axios.put(
-      `http://localhost:8080/comment`,
+      `http://103.183.112.116:8080/comment`,
       {
         postId,
         comment,
@@ -91,7 +91,7 @@ export const comment = async (postId, comment, image, token) => {
 export const savePost = async (postId, token) => {
   try {
     const { data } = await axios.put(
-      `http://localhost:8080/savePost/${postId}`,
+      `http://103.183.112.116:8080/savePost/${postId}`,
       {},
 
       {
@@ -109,7 +109,7 @@ export const savePost = async (postId, token) => {
 export const deletePost = async (postId, token) => {
   try {
     const { data } = await axios.delete(
-      `http://localhost:8080/deletePost/${postId}`,
+      `http://103.183.112.116:8080/deletePost/${postId}`,
 
       {
         headers: {

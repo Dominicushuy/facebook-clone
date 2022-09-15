@@ -32,7 +32,7 @@ export default function Intro({ detailss, visitor, setOthername }) {
     try {
       console.log("sent");
       const { data } = await axios.put(
-        `http://localhost:8080/updateDetails`,
+        `http://103.183.112.116:8080/updateDetails`,
         {
           infos,
         },

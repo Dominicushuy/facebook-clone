@@ -23,9 +23,12 @@ export default function SearchAccount({
     try {
       setLoading(true);
 
-      const { data } = await axios.post(`http://localhost:8080/findUser`, {
-        email,
-      });
+      const { data } = await axios.post(
+        `http://103.183.112.116:8080/findUser`,
+        {
+          email,
+        }
+      );
       setUserInfos(data);
       setVisible(1);
       setError("");
