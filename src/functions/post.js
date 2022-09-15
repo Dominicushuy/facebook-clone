@@ -20,6 +20,7 @@ export const createPost = async (
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -39,6 +40,7 @@ export const reactPost = async (postId, react, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -55,6 +57,7 @@ export const getReacts = async (postId, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -76,6 +79,7 @@ export const comment = async (postId, comment, image, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -93,6 +97,7 @@ export const savePost = async (postId, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -109,6 +114,7 @@ export const deletePost = async (postId, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );

@@ -9,6 +9,7 @@ export const updateprofilePicture = async (url, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -27,6 +28,7 @@ export const updateCover = async (url, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -44,6 +46,7 @@ export const addFriend = async (id, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -61,6 +64,7 @@ export const cancelRequest = async (id, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -78,6 +82,7 @@ export const follow = async (id, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -96,6 +101,7 @@ export const unfollow = async (id, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -113,6 +119,7 @@ export const acceptRequest = async (id, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -130,6 +137,7 @@ export const unfriend = async (id, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -147,6 +155,7 @@ export const deleteRequest = async (id, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -164,6 +173,7 @@ export const search = async (searchTerm, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -181,6 +191,7 @@ export const addToSearchHistory = async (searchUser, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -197,6 +208,7 @@ export const getSearchHistory = async (token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -214,6 +226,7 @@ export const removeFromSearch = async (searchUser, token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
@@ -230,6 +243,7 @@ export const getFriendsPageInfos = async (token) => {
       {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
         },
       }
     );
