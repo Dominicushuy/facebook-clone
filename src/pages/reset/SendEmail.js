@@ -14,9 +14,12 @@ export default function SendEmail({
   const sendEmail = async () => {
     try {
       setLoading(true);
-      await axios.post(`http://103.183.112.116:8080/sendResetPasswordCode`, {
-        email,
-      });
+      await axios.post(
+        `https://shielded-beyond-09510.herokuapp.com/sendResetPasswordCode`,
+        {
+          email,
+        }
+      );
       setError("");
       setVisible(2);
       setLoading(false);

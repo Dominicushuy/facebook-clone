@@ -32,7 +32,7 @@ export default function Intro({ detailss, visitor, setOthername }) {
     try {
       console.log("sent");
       const { data } = await axios.put(
-        `http://103.183.112.116:8080/updateDetails`,
+        `https://shielded-beyond-09510.herokuapp.com/updateDetails`,
         {
           infos,
         },

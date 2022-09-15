@@ -24,7 +24,7 @@ export default function SearchAccount({
       setLoading(true);
 
       const { data } = await axios.post(
-        `http://103.183.112.116:8080/findUser`,
+        `https://shielded-beyond-09510.herokuapp.com/findUser`,
         {
           email,
         }

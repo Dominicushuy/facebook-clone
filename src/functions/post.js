@@ -9,7 +9,7 @@ export const createPost = async (
 ) => {
   try {
     const { data } = await axios.post(
-      `http://103.183.112.116:8080/createPost`,
+      `https://shielded-beyond-09510.herokuapp.com/createPost`,
       {
         type,
         background,
@@ -32,7 +32,7 @@ export const createPost = async (
 export const reactPost = async (postId, react, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/reactPost`,
+      `https://shielded-beyond-09510.herokuapp.com/reactPost`,
       {
         postId,
         react,
@@ -52,7 +52,7 @@ export const reactPost = async (postId, react, token) => {
 export const getReacts = async (postId, token) => {
   try {
     const { data } = await axios.get(
-      `http://103.183.112.116:8080/getReacts/${postId}`,
+      `https://shielded-beyond-09510.herokuapp.com/getReacts/${postId}`,
 
       {
         headers: {
@@ -69,7 +69,7 @@ export const getReacts = async (postId, token) => {
 export const comment = async (postId, comment, image, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/comment`,
+      `https://shielded-beyond-09510.herokuapp.com/comment`,
       {
         postId,
         comment,
@@ -91,7 +91,7 @@ export const comment = async (postId, comment, image, token) => {
 export const savePost = async (postId, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/savePost/${postId}`,
+      `https://shielded-beyond-09510.herokuapp.com/savePost/${postId}`,
       {},
 
       {
@@ -109,7 +109,7 @@ export const savePost = async (postId, token) => {
 export const deletePost = async (postId, token) => {
   try {
     const { data } = await axios.delete(
-      `http://103.183.112.116:8080/deletePost/${postId}`,
+      `https://shielded-beyond-09510.herokuapp.com/deletePost/${postId}`,
 
       {
         headers: {

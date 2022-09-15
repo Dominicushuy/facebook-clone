@@ -3,7 +3,7 @@ import axios from "axios";
 export const uploadImages = async (formData, path, token) => {
   try {
     const { data } = await axios.post(
-      `http://103.183.112.116:8080/uploadImages`,
+      `https://shielded-beyond-09510.herokuapp.com/uploadImages`,
       formData,
       {
         headers: {

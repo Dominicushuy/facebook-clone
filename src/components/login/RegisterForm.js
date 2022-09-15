@@ -77,7 +77,7 @@ export default function RegisterForm({ setVisible }) {
   const registerSubmit = async () => {
     try {
       const { data } = await axios.post(
-        `http://103.183.112.116:8080/register`,
+        `https://shielded-beyond-09510.herokuapp.com/register`,
         {
           first_name,
           last_name,

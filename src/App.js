@@ -30,7 +30,7 @@ function App() {
         type: "POSTS_REQUEST",
       });
       const { data } = await axios.get(
-        `http://103.183.112.116:8080/getAllposts`,
+        `https://shielded-beyond-09510.herokuapp.com/getAllposts`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,

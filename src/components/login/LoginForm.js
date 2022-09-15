@@ -33,10 +33,13 @@ export default function LoginForm({ setVisible }) {
   const loginSubmit = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.post(`http://103.183.112.116:8080/login`, {
-        email,
-        password,
-      });
+      const { data } = await axios.post(
+        `https://shielded-beyond-09510.herokuapp.com/login`,
+        {
+          email,
+          password,
+        }
+      );
       dispatch({ type: "LOGIN", payload: data });
       Cookies.set("user", JSON.stringify(data));
       navigate("/");

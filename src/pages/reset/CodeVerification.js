@@ -24,10 +24,13 @@ export default function CodeVerification({
   const verifyCode = async () => {
     try {
       setLoading(true);
-      await axios.post(`http://103.183.112.116:8080/validateResetCode`, {
-        email,
-        code,
-      });
+      await axios.post(
+        `https://shielded-beyond-09510.herokuapp.com/validateResetCode`,
+        {
+          email,
+          code,
+        }
+      );
       setVisible(3);
       setError("");
       setLoading(false);

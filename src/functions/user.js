@@ -2,7 +2,7 @@ import axios from "axios";
 export const updateprofilePicture = async (url, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/updateProfilePicture`,
+      `https://shielded-beyond-09510.herokuapp.com/updateProfilePicture`,
       {
         url,
       },
@@ -21,7 +21,7 @@ export const updateprofilePicture = async (url, token) => {
 export const updateCover = async (url, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/updateCover`,
+      `https://shielded-beyond-09510.herokuapp.com/updateCover`,
       {
         url,
       },
@@ -40,7 +40,7 @@ export const updateCover = async (url, token) => {
 export const addFriend = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/addFriend/${id}`,
+      `https://shielded-beyond-09510.herokuapp.com/addFriend/${id}`,
       {},
 
       {
@@ -58,7 +58,7 @@ export const addFriend = async (id, token) => {
 export const cancelRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/cancelRequest/${id}`,
+      `https://shielded-beyond-09510.herokuapp.com/cancelRequest/${id}`,
       {},
 
       {
@@ -76,7 +76,7 @@ export const cancelRequest = async (id, token) => {
 export const follow = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/follow/${id}`,
+      `https://shielded-beyond-09510.herokuapp.com/follow/${id}`,
       {},
 
       {
@@ -95,7 +95,7 @@ export const follow = async (id, token) => {
 export const unfollow = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/unfollow/${id}`,
+      `https://shielded-beyond-09510.herokuapp.com/unfollow/${id}`,
       {},
 
       {
@@ -113,7 +113,7 @@ export const unfollow = async (id, token) => {
 export const acceptRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/acceptRequest/${id}`,
+      `https://shielded-beyond-09510.herokuapp.com/acceptRequest/${id}`,
       {},
 
       {
@@ -131,7 +131,7 @@ export const acceptRequest = async (id, token) => {
 export const unfriend = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/unfriend/${id}`,
+      `https://shielded-beyond-09510.herokuapp.com/unfriend/${id}`,
       {},
 
       {
@@ -149,7 +149,7 @@ export const unfriend = async (id, token) => {
 export const deleteRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/deleteRequest/${id}`,
+      `https://shielded-beyond-09510.herokuapp.com/deleteRequest/${id}`,
       {},
 
       {
@@ -167,7 +167,7 @@ export const deleteRequest = async (id, token) => {
 export const search = async (searchTerm, token) => {
   try {
     const { data } = await axios.post(
-      `http://103.183.112.116:8080/search/${searchTerm}`,
+      `https://shielded-beyond-09510.herokuapp.com/search/${searchTerm}`,
       {},
 
       {
@@ -185,7 +185,7 @@ export const search = async (searchTerm, token) => {
 export const addToSearchHistory = async (searchUser, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/addToSearchHistory`,
+      `https://shielded-beyond-09510.herokuapp.com/addToSearchHistory`,
       { searchUser },
 
       {
@@ -203,7 +203,7 @@ export const addToSearchHistory = async (searchUser, token) => {
 export const getSearchHistory = async (token) => {
   try {
     const { data } = await axios.get(
-      `http://103.183.112.116:8080/getSearchHistory`,
+      `https://shielded-beyond-09510.herokuapp.com/getSearchHistory`,
 
       {
         headers: {
@@ -220,7 +220,7 @@ export const getSearchHistory = async (token) => {
 export const removeFromSearch = async (searchUser, token) => {
   try {
     const { data } = await axios.put(
-      `http://103.183.112.116:8080/removeFromSearch`,
+      `https://shielded-beyond-09510.herokuapp.com/removeFromSearch`,
       { searchUser },
 
       {
@@ -238,7 +238,7 @@ export const removeFromSearch = async (searchUser, token) => {
 export const getFriendsPageInfos = async (token) => {
   try {
     const { data } = await axios.get(
-      `http://103.183.112.116:8080/getFriendsPageInfos`,
+      `https://shielded-beyond-09510.herokuapp.com/getFriendsPageInfos`,
 
       {
         headers: {
