@@ -77,7 +77,7 @@ export default function RegisterForm({ setVisible }) {
   const registerSubmit = async () => {
     try {
       const { data } = await axios.post(
-        `https://shielded-beyond-09510.herokuapp.com/register`,
+        `${process.env.REACT_APP_API_ENDPOINT}/register`,
         {
           first_name,
           last_name,

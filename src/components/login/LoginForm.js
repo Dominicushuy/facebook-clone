@@ -34,7 +34,7 @@ export default function LoginForm({ setVisible }) {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        `https://shielded-beyond-09510.herokuapp.com/login`,
+        `${process.env.REACT_APP_API_ENDPOINT}/login`,
         {
           email,
           password,
@@ -42,10 +42,12 @@ export default function LoginForm({ setVisible }) {
       );
       dispatch({ type: "LOGIN", payload: data });
       Cookies.set("user", JSON.stringify(data));
-      navigate("/");
+      setTimeout(() => {
+        navigate("/");
+      }, 500);
     } catch (error) {
       setLoading(false);
-      setError(error.response.data.message);
+      setError(error?.response?.data?.message);
     }
   };
   return (

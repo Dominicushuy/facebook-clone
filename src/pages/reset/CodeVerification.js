@@ -25,7 +25,7 @@ export default function CodeVerification({
     try {
       setLoading(true);
       await axios.post(
-        `https://shielded-beyond-09510.herokuapp.com/validateResetCode`,
+        `${process.env.REACT_APP_API_ENDPOINT}/validateResetCode`,
         {
           email,
           code,

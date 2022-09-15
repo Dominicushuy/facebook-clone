@@ -21,16 +21,19 @@ function App() {
     posts: [],
     error: "",
   });
+
   useEffect(() => {
-    getAllPosts();
-  }, []);
+    if (user?.token) {
+      getAllPosts();
+    }
+  }, [user]);
   const getAllPosts = async () => {
     try {
       dispatch({
         type: "POSTS_REQUEST",
       });
       const { data } = await axios.get(
-        `https://shielded-beyond-09510.herokuapp.com/getAllposts`,
+        `${process.env.REACT_APP_API_ENDPOINT}/getAllposts`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -44,7 +47,7 @@ function App() {
     } catch (error) {
       dispatch({
         type: "POSTS_ERROR",
-        payload: error.response.data.message,
+        payload: error?.response?.data?.message,
       });
     }
   };

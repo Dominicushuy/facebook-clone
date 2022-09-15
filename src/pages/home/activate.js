@@ -25,7 +25,7 @@ export default function Activate() {
     try {
       setLoading(true);
       const { data } = await axios.post(
-        `https://shielded-beyond-09510.herokuapp.com/activate`,
+        `${process.env.REACT_APP_API_ENDPOINT}/activate`,
         { token },
         {
           headers: {

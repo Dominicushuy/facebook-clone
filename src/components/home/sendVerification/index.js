@@ -7,7 +7,7 @@ export default function SendVerification({ user }) {
   const sendVerificationLink = async () => {
     try {
       const { data } = await axios.post(
-        `https://shielded-beyond-09510.herokuapp.com/sendVerification`,
+        `${process.env.REACT_APP_API_ENDPOINT}/sendVerification`,
         {},
         {
           headers: {

@@ -3,7 +3,7 @@ import "./style.css";
 import { stories } from "../../../data/home";
 import Story from "./Story";
 import { useMediaQuery } from "react-responsive";
-export default function Stories() {
+export default function Stories({ user }) {
   const query1175px = useMediaQuery({
     query: "(max-width: 1175px)",
   });
@@ -29,7 +29,7 @@ export default function Stories() {
     <div className="stories">
       <div className="create_story_card">
         <img
-          src="../../../images/default_pic.png"
+          src={user?.picture || "../../../images/default_pic.png"}
           alt=""
           className="create_story_img"
         />

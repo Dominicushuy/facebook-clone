@@ -24,7 +24,7 @@ export default function SearchAccount({
       setLoading(true);
 
       const { data } = await axios.post(
-        `https://shielded-beyond-09510.herokuapp.com/findUser`,
+        `${process.env.REACT_APP_API_ENDPOINT}/findUser`,
         {
           email,
         }

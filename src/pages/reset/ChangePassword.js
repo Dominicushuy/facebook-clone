@@ -32,13 +32,10 @@ export default function ChangePassword({
   const changePassword = async () => {
     try {
       setLoading(true);
-      await axios.post(
-        `https://shielded-beyond-09510.herokuapp.com/changePassword`,
-        {
-          email,
-          password,
-        }
-      );
+      await axios.post(`${process.env.REACT_APP_API_ENDPOINT}/changePassword`, {
+        email,
+        password,
+      });
       setError("");
       navigate("/");
     } catch (error) {

@@ -32,7 +32,7 @@ export default function Intro({ detailss, visitor, setOthername }) {
     try {
       console.log("sent");
       const { data } = await axios.put(
-        `https://shielded-beyond-09510.herokuapp.com/updateDetails`,
+        `${process.env.REACT_APP_API_ENDPOINT}/updateDetails`,
         {
           infos,
         },

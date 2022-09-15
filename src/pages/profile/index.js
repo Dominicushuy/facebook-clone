@@ -52,7 +52,7 @@ export default function Profile({ getAllPosts }) {
         type: "PROFILE_REQUEST",
       });
       const { data } = await axios.get(
-        `https://shielded-beyond-09510.herokuapp.com/getProfile/${userName}`,
+        `${process.env.REACT_APP_API_ENDPOINT}/getProfile/${userName}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -64,7 +64,7 @@ export default function Profile({ getAllPosts }) {
       } else {
         try {
           const images = await axios.post(
-            `https://shielded-beyond-09510.herokuapp.com/listImages`,
+            `${process.env.REACT_APP_API_ENDPOINT}/listImages`,
             { path, sort, max },
             {
               headers: {
@@ -172,6 +172,7 @@ export default function Profile({ getAllPosts }) {
                       {Array.from(new Array(6), (val, i) => i + 1).map(
                         (id, i) => (
                           <Skeleton
+                            key={i}
                             circle
                             height="32px"
                             width="32px"
@@ -229,7 +230,7 @@ export default function Profile({ getAllPosts }) {
       <div className="profile_bottom">
         <div className="profile_container">
           <div className="bottom_container">
-            <PplYouMayKnow />
+            {!username && <PplYouMayKnow userId={user.id} token={user.token} />}
             <div
               className={`profile_grid ${
                 check && scrollHeight >= height && leftHeight > 1000

@@ -184,7 +184,7 @@
 }
 .pplumayknow_list {
   display: flex;
-  gap: 5px;
+  gap: 8px;
   align-items: center;
   height: 240px;
 }
@@ -229,6 +229,7 @@
 .addfriend_name {
   font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
 }
 .light_blue_btn img {
   width: 20px;

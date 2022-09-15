@@ -9,7 +9,7 @@ export const createPost = async (
 ) => {
   try {
     const { data } = await axios.post(
-      `https://shielded-beyond-09510.herokuapp.com/createPost`,
+      `${process.env.REACT_APP_API_ENDPOINT}/createPost`,
       {
         type,
         background,
@@ -32,7 +32,7 @@ export const createPost = async (
 export const reactPost = async (postId, react, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/reactPost`,
+      `${process.env.REACT_APP_API_ENDPOINT}/reactPost`,
       {
         postId,
         react,
@@ -52,7 +52,7 @@ export const reactPost = async (postId, react, token) => {
 export const getReacts = async (postId, token) => {
   try {
     const { data } = await axios.get(
-      `https://shielded-beyond-09510.herokuapp.com/getReacts/${postId}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/getReacts/${postId}`,
 
       {
         headers: {
@@ -69,7 +69,7 @@ export const getReacts = async (postId, token) => {
 export const comment = async (postId, comment, image, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/comment`,
+      `${process.env.REACT_APP_API_ENDPOINT}/comment`,
       {
         postId,
         comment,
@@ -91,7 +91,7 @@ export const comment = async (postId, comment, image, token) => {
 export const savePost = async (postId, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/savePost/${postId}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/savePost/${postId}`,
       {},
 
       {
@@ -109,7 +109,7 @@ export const savePost = async (postId, token) => {
 export const deletePost = async (postId, token) => {
   try {
     const { data } = await axios.delete(
-      `https://shielded-beyond-09510.herokuapp.com/deletePost/${postId}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/deletePost/${postId}`,
 
       {
         headers: {

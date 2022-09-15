@@ -2,7 +2,7 @@ import axios from "axios";
 export const updateprofilePicture = async (url, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/updateProfilePicture`,
+      `${process.env.REACT_APP_API_ENDPOINT}/updateProfilePicture`,
       {
         url,
       },
@@ -21,7 +21,7 @@ export const updateprofilePicture = async (url, token) => {
 export const updateCover = async (url, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/updateCover`,
+      `${process.env.REACT_APP_API_ENDPOINT}/updateCover`,
       {
         url,
       },
@@ -40,7 +40,7 @@ export const updateCover = async (url, token) => {
 export const addFriend = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/addFriend/${id}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/addFriend/${id}`,
       {},
 
       {
@@ -58,7 +58,7 @@ export const addFriend = async (id, token) => {
 export const cancelRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/cancelRequest/${id}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/cancelRequest/${id}`,
       {},
 
       {
@@ -76,7 +76,7 @@ export const cancelRequest = async (id, token) => {
 export const follow = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/follow/${id}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/follow/${id}`,
       {},
 
       {
@@ -95,7 +95,7 @@ export const follow = async (id, token) => {
 export const unfollow = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/unfollow/${id}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/unfollow/${id}`,
       {},
 
       {
@@ -113,7 +113,7 @@ export const unfollow = async (id, token) => {
 export const acceptRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/acceptRequest/${id}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/acceptRequest/${id}`,
       {},
 
       {
@@ -131,7 +131,7 @@ export const acceptRequest = async (id, token) => {
 export const unfriend = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/unfriend/${id}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/unfriend/${id}`,
       {},
 
       {
@@ -149,7 +149,7 @@ export const unfriend = async (id, token) => {
 export const deleteRequest = async (id, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/deleteRequest/${id}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/deleteRequest/${id}`,
       {},
 
       {
@@ -167,7 +167,7 @@ export const deleteRequest = async (id, token) => {
 export const search = async (searchTerm, token) => {
   try {
     const { data } = await axios.post(
-      `https://shielded-beyond-09510.herokuapp.com/search/${searchTerm}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/search/${searchTerm}`,
       {},
 
       {
@@ -185,7 +185,7 @@ export const search = async (searchTerm, token) => {
 export const addToSearchHistory = async (searchUser, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/addToSearchHistory`,
+      `${process.env.REACT_APP_API_ENDPOINT}/addToSearchHistory`,
       { searchUser },
 
       {
@@ -203,7 +203,7 @@ export const addToSearchHistory = async (searchUser, token) => {
 export const getSearchHistory = async (token) => {
   try {
     const { data } = await axios.get(
-      `https://shielded-beyond-09510.herokuapp.com/getSearchHistory`,
+      `${process.env.REACT_APP_API_ENDPOINT}/getSearchHistory`,
 
       {
         headers: {
@@ -220,7 +220,7 @@ export const getSearchHistory = async (token) => {
 export const removeFromSearch = async (searchUser, token) => {
   try {
     const { data } = await axios.put(
-      `https://shielded-beyond-09510.herokuapp.com/removeFromSearch`,
+      `${process.env.REACT_APP_API_ENDPOINT}/removeFromSearch`,
       { searchUser },
 
       {
@@ -238,8 +238,25 @@ export const removeFromSearch = async (searchUser, token) => {
 export const getFriendsPageInfos = async (token) => {
   try {
     const { data } = await axios.get(
-      `https://shielded-beyond-09510.herokuapp.com/getFriendsPageInfos`,
+      `${process.env.REACT_APP_API_ENDPOINT}/getFriendsPageInfos`,
 
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
+    );
+    return { status: "ok", data };
+  } catch (error) {
+    return error.response.data.message;
+  }
+};
+
+export const getPeopleYouMayKnow = async (token) => {
+  try {
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_API_ENDPOINT}/getPeopleYouMayKnow`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
